@@ -1,0 +1,20 @@
+workspace = { members = [ "db_outbound","domain", "bookstore_api", "bookstore_server"] }
+[package]
+name = "rust-hexagonal-arkitektur"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+domain = { path = "./domain" }
+db_outbound = { path = "./db_outbound" }
+bookstore_api = { path = "./bookstore_api" }
+bookstore_server = { path = "./bookstore_server"}
+
+
+serde = { version = "1.0.204", features = ["derive"] }
+actix-web = "4"
+serde_json = "1"
+
+[build-dependencies]
